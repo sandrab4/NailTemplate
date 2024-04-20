@@ -1,9 +1,12 @@
 import styles from "./page.module.css";
+import Header from "./GlobalComponents/Header";
+import Hero from "./Components/Hero";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-
-    </main>
+    <div>
+      <Header />
+      <Hero />
+    </div>
   );
-}
+};
