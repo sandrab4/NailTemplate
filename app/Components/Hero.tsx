@@ -14,16 +14,17 @@ const Hero = () => {
                     display: flex;
                     position: relative;
                     width: 100vw;
-                    height: 60vh;
-                    border: 1px solid blue;
+                    height: 100%;
+                    margin-top: 12vh;
                 }
                 #HeroImageContainer {
                     display: flex;
                     position: relative;
-                    height: 78%;
+                    width: 100%;
+                    align-items: flex-start;
                 }
                 #HeroImage {
-                    z-index: -1;
+                    width: 100%;
                 }
                 `}
             </style>
