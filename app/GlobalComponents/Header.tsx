@@ -31,7 +31,10 @@ const Header = () => {
                     width: 100vw;
                     height: 12vh;
                     background: #EBF0F3;
-                }
+                    box-shadow: 0px 5px 5px #ccc;
+                    z-index: 3;
+                } 
+
                 #HeaderLogoContainer {
                     display: flex;
                     position: fixed;
@@ -42,9 +45,11 @@ const Header = () => {
                     align-item: center;
                     border: 1px solid red;
                 }
+
                 #HeaderLogo {
                     width: 50px;
                 }
+
                 #HeaderTextContainer {
                     display: flex;
                     position: relative;
@@ -55,6 +60,7 @@ const Header = () => {
                     justify-content: center;
                     align-items: center;
                 }
+
                 #HeaderListContainer {
                     display: flex;
                     position: relative;
@@ -65,6 +71,7 @@ const Header = () => {
                     align-items: center;
                     list-style-type: none;
                 }
+
                 #HeaderListItems {
                     display: flex;
                     position: relative;
@@ -76,6 +83,7 @@ const Header = () => {
                     color: black;
                     text-decoration: none;
                 }
+                
                 #HeaderListIcons {
                     display: flex;
                     position: relative;

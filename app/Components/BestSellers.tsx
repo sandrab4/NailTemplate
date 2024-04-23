@@ -4,36 +4,34 @@ import { BestSellersData } from "../Data/BestSellersData";
 const BestSellers = () => {
     return (
         <div id="BestSellers">
-            <div id="BestHeaderContainer">
-                <h1 id="BestHeader">Best Sellers</h1>
+            <div id="BestSellersHeaderContainer">
+                <h1 id="BestSellersHeader">Best Sellers</h1>
             </div>
             <div id="BestSellersCardsContainer">
                 {BestSellersData.map((data) => (
-                    <div id="BestSellersCards" key={data.id}>
-                        <div id="BestSellersCardsImagesContainer">
+                    <div id="BestSellersCard" key={data.id}>
+                        <div id="BestSellersCardImageContainer">
                             {data.image && (
-                                <img id="BestSellersCardsImages" src={data.image} />
+                                <img id="BestSellersCardImage" src={data.image} />
                             )}
                         </div>
-                        <div id="BestSellersCardsCartContainer">
-                            <button id="BestSellersCardsCartButton">Add to cart</button>
-                        </div>
-                        <div id="BestSellersCardsTextContainer">
-                            <div id="BestSellersCardsNameContainer">
-                                <p id="BestSellersCardsName">{data.name}</p>
+                        <div id="BestSellersCardCartContainer">Add to cart</div>
+                        <div id="BestSellersCardTextContainer">
+                            <div id="BestSellersCardNameContainer">
+                                <p id="BestSellersCardName">{data.name}</p>
                             </div>
-                            <div id="BestSellersCardsShapeContainer">
-                                <p id="BestSellersCardsShape">{data.shape}</p>
+                            <div id="BestSellersCardShapeContainer">
+                                <p id="BestSellersCardShape">{data.shape}</p>
                             </div>
-                            <div id="BestSellersCardsPriceContainer">
-                                <p id="BestSellersCardsPrice">${data.price}</p>
+                            <div id="BestSellersCardPriceContainer">
+                                <p id="BestSellersCardPrice">${data.price}</p>
                             </div>
                         </div>
                     </div>
                 ))}
-                <div id="BestSellersShopAllButtonContainer">
-                    <button id="BestSellersShopAllButton">Shop all nails</button>
-                </div>
+            </div>
+            <div id="BestSellersShopAllButtonContainer">
+                <button id="BestSellersShopAllButton">Shop all nails</button>
             </div>
 
             <style>
@@ -42,70 +40,124 @@ const BestSellers = () => {
                     display: flex;
                     position: relative;
                     width: 100vw;
-                    height: 100vh;
+                    height: 100%;  
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                 }
-                #BestHeaderContainer {
+
+                #BestSellersHeaderContainer {
                     display: flex;
                     position: relative;
                     width: 100%;
+                    padding: 20px 0;
+                    justify-content: center;
+                    align-items: center;
                 }
-                #BestHeader {
-                    display: flex;
-                    position: relative:
+
+                #BestSellersHeader {
+
                 }
+
                 #BestSellersCardsContainer {
                     display: flex;
                     position: relative;
                     width: 100%;
-                    flex-direction: row;
-                    border: 1px solid blue;
+                    height: 85%;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    align-items: space-around;
+                    overflow: hidden;
                 }
-                #BestSellersCards {
+
+                #BestSellersCard { 
+                    display: flex;
+                    position: relative;
+                    width: 250px;
+                    height: 320px;
+                    margin: 10px;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2), 0 3px 3px 2px rgba(0, 0, 0, 0.10);
+                    border-radius: 10px;
+                }
+
+                #BestSellersCardImageContainer {
                     display: flex;
                     position: relative;
                     width: 100%;
-                    height: 50%;
-                    border: 1px solid red;
+                    height: 60%;
+                    justify-content: center;
+                    align-items: center;
                 }
-                #BestSellersImagesCardsContainer {
 
+                #BestSellersCardImage {
+                    height: 100%;
                 }
-                #BestSellersCardsImages {
-                    width: 20px;
-                    height: 20px;
-                }
-                #BestSellersCardsCartContainer {
 
+                #BestSellersCardCartContainer {
+                    display: flex;
+                    position: relative;
+                    width: 95%;
+                    height: 10%;
+                    margin: 10px 0;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    box-shadow: 0 1px 0 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    border-radius: 10px;
                 }
-                #BestSellersCardsCartButton {
 
+                #BestSellersCardTextContainer {
+                    display: flex;
+                    position: relative;
+                    width: 100%;
+                    height: 35%;
+                    padding-left: 10px;
+                    flex-direction: column;
+                    justify-content: space-around;
                 }
-                #BestSellersCardsTextContainer {
 
-                }
-                #BestSellersCardsNameContainer {
-
-                }
-                #BestSellersCardsName {
-
-                }
-                #BestSellersCardsShapeContainer {
-
-                }
-                #BestSellersCardsShape {
-
-                }
-                #BestSellersCardsPriceContainer {
-
-                }
-                #BestSellersCardsPrice {
-
-                }
-                #BestSellersShopAllButtonContainer {
-
-                }
-                #BestSellersShopAllButton {
+                #BestSellersCardNameContainer {
                     
+                }
+
+                #BestSellersCardName {
+                    
+                }
+
+                #BestSellersCardShapeContainer {
+
+                }
+
+                #BestSellersCardShape {
+
+                }
+
+                #BestSellersCardPriceContainer {
+
+                }
+
+                #BestSellersCardPrice {
+
+                }
+
+                #BestSellersShopAllButtonContainer {
+                    padding: 20px 0;
+                }
+                
+                #BestSellersShopAllButton {
+                    font-size: 15px;
+                    color: #EBF0F3;
+                    background: black;     
+                    padding: 5px 25px 5px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+                
+                #BestSellersShopAllButton:hover {
+                    background: #28282B;
                 }
                 `}
             </style>
