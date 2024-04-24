@@ -119,28 +119,16 @@ const BestSellers = () => {
                     justify-content: space-around;
                 }
 
-                #BestSellersCardNameContainer {
-                    
-                }
-
                 #BestSellersCardName {
-                    
-                }
-
-                #BestSellersCardShapeContainer {
-
+                    font-weight: bold;
                 }
 
                 #BestSellersCardShape {
-
-                }
-
-                #BestSellersCardPriceContainer {
-
+                    font-size: 14px;
                 }
 
                 #BestSellersCardPrice {
-
+                    font-style: italic;
                 }
 
                 #BestSellersShopAllButtonContainer {

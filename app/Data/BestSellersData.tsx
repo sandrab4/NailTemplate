@@ -9,6 +9,6 @@ export const BestSellersData = [
         id: 3, image: "https://m.media-amazon.com/images/I/61yLDl0QHdL._AC_UF1000,1000_QL80_DpWeblab_.jpg", name: "Hello Kitty", shape: "Coffin", price: "50",
     },
     {
-        id: 4, image: "https://nailartinspo.com/wp-content/uploads/2022/08/stiletto-nails-1.jpg", name: "Stilleto French Tip", shape: "Stilleto", price: "50",
+        id: 4, image: "https://nailartinspo.com/wp-content/uploads/2022/08/stiletto-nails-1.jpg", name: "Stiletto French Tip", shape: "Stiletto", price: "50",
     },
 ]
