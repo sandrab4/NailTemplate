@@ -66,7 +66,8 @@ const Shapes = () => {
                     height: 100%;
                 }
 
-                #ShapesCardShopAllContainer {                    display: flex;
+                #ShapesCardShopAllContainer {
+                    display: flex;
                     position: relative;
                     width: 95%;
                     height: 10%;
