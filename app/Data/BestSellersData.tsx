@@ -1,4 +1,6 @@
-export const BestSellersData = [
+import { Nail } from "../utils/types";
+
+export const BestSellersData: Nail[] = [
     {
        id: 1, image: "https://www.beautystack.com/wp-content/uploads/black_french_tip_nails_3.jpg", name: "French Tip", shape: "Square", price: "50",
     },
@@ -11,4 +13,4 @@ export const BestSellersData = [
     {
         id: 4, image: "https://nailartinspo.com/wp-content/uploads/2022/08/stiletto-nails-1.jpg", name: "Stiletto French Tip", shape: "Stiletto", price: "50",
     },
-]
+];

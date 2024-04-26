@@ -1,45 +1,23 @@
 import React from "react";
-import { ShapesData } from "../Data/Shapes";
+import { Shape } from "../utils/types";
 
-const Shapes = () => {
+interface ShapeCardProps {
+    data: Shape;
+};
+
+const ShapeCard: React.FC<ShapeCardProps> = ({ data }) => {
+
     return (
-        <div id="Shapes">
-            <div id="ShapesCardsContainer">
-                {ShapesData.map((data) => (
-                    <div id="ShapesCard" key={data.id}>
-                        <div id="ShapesCardImageContainer">
-                            {data.image && (
-                                <img id="ShapesCardImage" src={data.image} />
-                            )}
-                        </div>
-                        <div id="ShapesCardShopAllContainer">{data.title}</div>
-                    </div>
-                ))}
+        <>
+            <div id="ShapesCard" key={data.id}>
+                <div id="ShapesCardImageContainer">
+                    <img id="ShapesCardImage" src={data.image} />
+                </div>
+                <div id="ShapesCardShopAllContainer">{data.title}</div>
             </div>
-
+            
             <style>
                 {`
-                #Shapes {
-                    display: flex;
-                    position: relative;
-                    width: 100vw;
-                    height: 100%;  
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                #ShapesCardsContainer {
-                    display: flex;
-                    position: relative;
-                    width: 100%;
-                    height: 85%;
-                    flex-wrap: wrap;
-                    justify-content: space-around;
-                    align-items: space-around;
-                    overflow: hidden;
-                }
-
                 #ShapesCard {
                     display: flex;
                     position: relative;
@@ -79,8 +57,8 @@ const Shapes = () => {
                 }
                 `}
             </style>
-        </div>
+        </>
     );
 };
 
-export default Shapes;
+export default ShapeCard;
