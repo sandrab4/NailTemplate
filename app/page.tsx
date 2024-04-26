@@ -1,8 +1,8 @@
-import Header from "./GlobalComponents/Header";
-import Hero from "./Components/Hero";
-import BestSellers from "./Components/BestSellers";
-import Shapes from "./Components/Shapes";
-import Footer from "./GlobalComponents/Footer";
+import Header from "./global/header";
+import Hero from "./sections/hero";
+import BestSellers from "./sections/bestSellers";
+import Shapes from "./sections/shapes";
+import Footer from "./global/footer";
 
 export default function Home() {
   return (

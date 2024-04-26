@@ -1,4 +1,6 @@
 import React from "react";
+import { MdOutlineMail } from "react-icons/md";
+import { FaPinterest } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -6,14 +8,14 @@ const Footer = () => {
             <div id="FooterContainer">
                 <div id="FooterQuickLinksContainer">
                     <p id="FooterQuickLinksHeader">Quick Links</p>
-                    <p>FAQ</p>
-                    <p>How to apply nails</p>
-                    <p>How to remove nails</p>
+                    <a href="/faq">FAQ</a>
+                    <a href="/how-to/apply">How to apply nails</a>
+                    <a href="/how-to/remove">How to remove nails</a>
                 </div>
                 <div id="FooterContactContainer">
                     <p id="FooterContactHeader">Contact Us!</p>
-                    <p>Email</p>
-                    <p>Contact Form</p>
+                    <a href="/">Email <MdOutlineMail /></a>
+                    <a href="/">Pinterest <FaPinterest /></a>
                 </div>
             </div>
             <div id="FooterLogoContainer">
@@ -75,6 +77,12 @@ const Footer = () => {
                     width: 100%;
                     height: 40%;
                     border: 1px solid red;
+                }
+
+                @media (max-width: 700px) {
+                    #FooterContactContainer, #FooterQuickLinksContainer {
+                        padding: 10px 10px;
+                    }
                 }
                 `}
             </style>
