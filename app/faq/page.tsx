@@ -1,3 +1,5 @@
+"use client"
+import React, { useState }  from "react";
 import FaqCard from "./components/faqCard";
 import { Faq } from "../utils/types";
 import { FaqData } from "../data/faqData";
@@ -5,6 +7,17 @@ import Header from "../global/header";
 import Footer from "../global/footer";
 
 export default function Page() {
+
+    const [currentCard, setCurrentCard] = useState<number>();
+
+    const handleCurrentCard = (id: number) => {
+        if (id === currentCard) {
+            setCurrentCard(undefined);
+        } else {
+            setCurrentCard(id);
+        };
+    };
+
     return (
         <>
         <Header />
@@ -13,8 +26,8 @@ export default function Page() {
                     <h1>FAQ</h1>
                 </div>
                 <div id="FAQCardsContainer">
-                    {FaqData.map((data: Faq) => (
-                        <FaqCard data={data} />
+                    {FaqData.map((data: Faq, index: number) => (
+                        <FaqCard data={data} index={Number(currentCard)} sendClicked={(id: number) => handleCurrentCard(id)} />
                     ))}
                 </div>
 
@@ -30,8 +43,6 @@ export default function Page() {
                         align-items: center;
                         margin-top: 15vh;
                         margin-bottom: 15vh;
-                        padding-left: 100px;
-                        padding-right: 100px;
                     }
 
                     #FAQHeaderContainer {
@@ -44,7 +55,11 @@ export default function Page() {
                     }
 
                     #FAQCardsContainer {
-                        border: 1px solid red;
+                        display: flex;
+                        position: relative;
+                        width: 80%;
+                        height: 100%;
+                        flex-direction: column;
                     }
                     `}
                 </style>

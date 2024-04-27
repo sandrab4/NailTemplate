@@ -4,6 +4,20 @@ export default function Page() {
             <div id="ApplyHeaderContainer">
 
             </div>
+
+            <style>
+                {`
+                #Apply {
+
+                }
+
+                #ApplyHeaderContainer {
+
+                }
+
+                #
+                `}
+            </style>
         </div>
     );
 };
