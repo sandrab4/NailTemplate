@@ -30,7 +30,7 @@ const FaqCard: React.FC<FaqCardProps> = ({ data, index, sendClicked }) => {
                 }
 
                 #FaqCardQuestionContainer {
-                    color: pink;
+                    color: black;
                     font-weight: bold;
                 }
 
