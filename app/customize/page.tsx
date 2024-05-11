@@ -1,11 +1,11 @@
 import React from "react";
+import Link from "next/link";
 import Header from "../global/header";
 import Footer from "../global/footer";
 
 export default function Page() {
     return (
         <div>
-            <>
             <Header />
             <div id="Customize">
                 <div id="CustomizeHeaderCotainer">
@@ -45,7 +45,7 @@ export default function Page() {
                     </div>
                 </div>
                 <div id="CustomizeButtonContainer">
-                    <button id="CustomizeButton">Start customizing!</button>
+                    <Link id="CustomizeButton" href="/customize/new">Start customizing!</Link>
                 </div>
 
                 <style>
@@ -123,13 +123,21 @@ export default function Page() {
                     }
 
                     #CustomizeButton {
+                        font-size: 15px;
+                        color: #EBF0F3;
+                        background: black;     
+                        padding: 5px 25px 5px;
+                        border-radius: 10px;
+                        cursor: pointer;
+                    }
 
+                    #CustomizeButton:hover {
+                        background: #28282B;
                     }
                     `}
                 </style>
             </div>
-            <Footer />
-            </>
+            <Footer/>
         </div>
     );
 };
