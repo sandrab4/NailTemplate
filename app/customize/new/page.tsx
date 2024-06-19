@@ -6,84 +6,199 @@ import Footer from "../../global/footer";
 
 export default function Page() {
 
-    const [currentCard, setCurrentCard] = useState<number>();
+    const [currentIndex, setCurrentIndex] = useState<number>();
+    const [prewviewData, setPreviewData]  = useState<any>();
 
-    const handleCurrentCard = (id: number) => {
-        if (id === currentCard) {
-            setCurrentCard(undefined);
+    const handleCurrentIndex = (id: number) => {
+        if (id === currentIndex) {
+            setCurrentIndex(undefined);
         } else {
-            setCurrentCard(id);
-        };
+            setCurrentIndex(id);
+        }
+    };
+
+    const handleSendDataToPreview = (data: any) => {
+        setPreviewData(data);
     };
 
     return (
         <div>
             <Header/>
             <div id="New">
-                <div id="NewHeaderContainer">
-                    <h1>Design your own Press-On Nails</h1>
-                    <p>$45</p>
-                </div>
-                <div id="ShapeContainer">
-
-                </div>
-                <div id="ColorContainer">
-
-                </div>
-                <div id="ImagesContainer">
-
-                </div>
-                <div id="CharmsContainer">
-
-                </div>
-                <div id="SizeConatiner">
-
-                </div>
-                <div id="NewCartContainer">
-                    <button>Add to cart</button>
+                <div id="NewCustomizeContainer">
+                    <div id="NewModelContainer">
+                    </div>
+                    <div id="NewCustomizeOptionsContainer">
+                        <div id="NewHeaderContainer">
+                            <h1 id="NewHeader">Design your own Press-On Nails</h1>
+                            <p>$45</p>
+                        </div>
+                        <div id="NewNailDropdownContainer">
+                            <div id="NewShapeContainer">
+                                <NailDropdown 
+                                    id={1}
+                                    index={Number(currentIndex)}
+                                    title="Shape & Length"
+                                    options={['square', 'almond', 'coffin', 'stiletto']}
+                                    polar={false}
+                                    sizeOptions={['short', 'medium', 'large']}
+                                    sendClicked={handleCurrentIndex}
+                                    sendData={handleSendDataToPreview}
+                                />
+                            </div>
+                            <div id="NewColorContainer">
+                                <NailDropdown 
+                                    id={2}
+                                    index={Number(currentIndex)}
+                                    title="Base Color"
+                                    options={['white', 'light pink', 'pink', 'red', 'light blue', 'blue', 'light purple', 'purple', 'yellow', 'grey', 'green', 'black']}
+                                    polar={false}
+                                    sendClicked={handleCurrentIndex}
+                                    sendData={handleSendDataToPreview}
+                                />
+                            </div>
+                            <div id="NewImagesContainer">
+                                <NailDropdown 
+                                    id={3}
+                                    index={Number(currentIndex)}
+                                    title="Add Custom Images?"
+                                    polar={true}
+                                    sendClicked={handleCurrentIndex}
+                                    sendData={handleSendDataToPreview}
+                                />
+                            </div>
+                            <div id="NewCharmsContainer">
+                                <NailDropdown 
+                                    id={4}
+                                    index={Number(currentIndex)}
+                                    title="Add Charms?"
+                                    polar={true}
+                                    sendClicked={handleCurrentIndex}
+                                    sendData={handleSendDataToPreview}
+                                />
+                            </div>
+                            <div id="NewSizeConatiner">
+                                <NailDropdown 
+                                    id={5}
+                                    index={Number(currentIndex)}
+                                    title="Size"
+                                    options={['x-small', 'small', 'medium', 'large']}
+                                    polar={false}
+                                    sendClicked={handleCurrentIndex}
+                                    sendData={handleSendDataToPreview}
+                                />
+                            </div>
+                        </div>
+                        <div id="NewCartContainer">
+                            <div id="NewCartButton">Add to cart</div>
+                        </div>
+                    </div>
                 </div>
                 
                 <style>
                     {`
                     #New {
                         display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-top: 5vh;
+                        margin-bottom: 5vh;
+                        padding: 120px 0;
+                        border-radius: 10px;
+                    }
+
+                    #NewHeaderContainer {                        
+                        display: flex;
                         position: relative;
-                        width: 100vw;
-                        height: 100%;  
+                        width: 100%;
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-                        margin-top: 15vh;
-                        margin-bottom: 15vh;
-                    }
-                    #NewHeaderContainer {
-
-                    }
-                    #ShapeContainer {
-
-                    }
-                    #ColorContainer {
-
+                        margin-top: 2vh;
+                        margin-bottom: 2vh;
                     }
 
-                    #ImagesContainer {
-
+                    #NewHeader {
+                        font-size: 25px;
                     }
 
-                    #CharmsContainer {
-
+                    #NewNailDropdownContainer {
+                        display: flex;
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        flex-direction: column;
+                        background-color: #f0f0f0;
+                        overflow-y: scroll;
                     }
 
-                    #SizeConatiner {
+                    #NewCustomizeContainer {
+                        display: flex;
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                    }
 
+                    #NewModelContainer {
+                        display: flex;
+                        position: relative;
+                        width: 70%;
+                        height: 70vh;
+                        padding: 10px 100px;
+                    }
+
+                    #NewCustomizeOptionsContainer {
+                        display: flex;
+                        position: relative;
+                        width: 30%;
+                        height: 70vh;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    #NewShapeContainer {
+                        width: 100%;
+                        
+                    }
+                    
+                    #NewColorContainer {
+                        width: 100%;
+                    }
+
+                    #NewImagesContainer {
+                        width: 100%;
+                    }
+
+                    #NewCharmsContainer {
+                        width: 100%;
+                    }
+
+                    #NewSizeConatiner {
+                        width: 100%;
                     }
 
                     #NewCartContainer {
+                        width: 100%;
+                    }
 
+                    #NewCartButton {
+                        display: flex;
+                        position: relative;
+                        height: 60px;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 17px;
+                        color: #EBF0F3;
+                        background: black;
+                        cursor: pointer;
+                    }
+
+                    #NewCartButton:hover {
+                        background: #28282B;
                     }
                     `}
                 </style>
-
             </div>
             <Footer/>
         </div>

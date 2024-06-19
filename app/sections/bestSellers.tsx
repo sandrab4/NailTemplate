@@ -26,23 +26,19 @@ const BestSellers = () => {
                     position: relative;
                     width: 100vw;
                     height: 100%;  
-                    margin: 5vh 0;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    margin: 5vh 0;
                 }
 
                 #BestSellersHeaderContainer {
                     display: flex;
                     position: relative;
                     width: 100%;
-                    padding: 20px 0;
                     justify-content: center;
                     align-items: center;
-                }
-
-                #BestSellersHeader {
-
+                    padding: 20px 0;
                 }
 
                 #BestSellersCardsContainer {
@@ -50,9 +46,9 @@ const BestSellers = () => {
                     position: relative;
                     width: 100%;
                     height: 85%;
-                    flex-wrap: wrap;
                     justify-content: space-around;
                     align-items: space-around;
+                    flex-wrap: wrap;
                     overflow: hidden;
                 }
 

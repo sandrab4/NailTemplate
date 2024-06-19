@@ -50,9 +50,9 @@ export default function Page() {
                     display: flex;
                     position: relative;
                     width: 100%;
-                    padding: 20px 0;
                     justify-content: center;
                     align-items: center;
+                    padding: 20px 0;
                     margin-bottom: 10vh;
                 }
 
