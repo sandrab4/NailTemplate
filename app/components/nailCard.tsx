@@ -33,10 +33,10 @@ const NailCard: React.FC<NailCardProps> = ({ data }) => {
                         position: relative;
                         width: 250px;
                         height: 320px;
-                        margin: 10px;
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
+                        margin: 10px;
                         box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2), 0 3px 3px 2px rgba(0, 0, 0, 0.10);
                         border-radius: 10px;
                     }
@@ -59,12 +59,12 @@ const NailCard: React.FC<NailCardProps> = ({ data }) => {
                         position: relative;
                         width: 95%;
                         height: 10%;
-                        margin: 10px 0;
                         justify-content: center;
                         align-items: center;
-                        cursor: pointer;
+                        margin: 10px 0;
                         box-shadow: 0 1px 0 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                         border-radius: 10px;
+                        cursor: pointer;
                     }
 
                     #NailCardTextContainer {
@@ -72,9 +72,9 @@ const NailCard: React.FC<NailCardProps> = ({ data }) => {
                         position: relative;
                         width: 100%;
                         height: 35%;
-                        padding-left: 10px;
                         flex-direction: column;
                         justify-content: space-around;
+                        padding-left: 10px;
                     }
 
                     #NailCardName {

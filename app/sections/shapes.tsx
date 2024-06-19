@@ -30,9 +30,9 @@ const Shapes = () => {
                     position: relative;
                     width: 100%;
                     height: 85%;
-                    flex-wrap: wrap;
                     justify-content: space-around;
                     align-items: space-around;
+                    flex-wrap: wrap;
                     overflow: hidden;
                 }
                 `}
